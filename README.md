@@ -10,20 +10,21 @@
 
 Este codigo muestra el sumador de 1 bit siendo declarado por compuertas logicas. Primero se declaran las variables:
 
+```
     input  A;
     input  B;
     input  Ci;
     output Cout;
     output S;
-
+```
 Ahora se crean las conexiones fisicas que van a tener:
-
+```
     wire a_ab;
     wire x_ab;
     wire cout_t;
-
+```
 Y por ultimo las compuertas logicas:
-
+```
     and(a_ab,A,B);
     xor(x_ab,A,B);
 
@@ -31,7 +32,7 @@ Y por ultimo las compuertas logicas:
     and(cout_t,x_ab,Ci);
 
     or(Cout,cout_t,a_ab);
-
+```
 ### sum1bcc
 
 En el codigo se no se programan las puertas de manera explicita:
